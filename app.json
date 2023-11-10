@@ -15,16 +15,26 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Precisamos de acesso à sua câmera para tirar fotos."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "permissions": ["CAMERA"]
       }
+      
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": {
+      "expo-camera": {
+        "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+      }
     }
   }
 }
